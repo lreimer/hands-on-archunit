@@ -1,3 +1,4 @@
 rootProject.name = 'hands-on-archunit'
 
 include('weather-app')
+include('weather-service')
