@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'com.tngtech.archunit:archunit-junit4:0.18.0'
+}
+
+application {
+    mainClass = 'hands.on.archunit.WeatherApp'
+}
+
+tasks.named('test') {
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
