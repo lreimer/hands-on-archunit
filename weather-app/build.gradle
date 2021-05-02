@@ -7,13 +7,23 @@ repositories {
     mavenCentral()
 }
 
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
 dependencies {
+    implementation 'info.picocli:picocli:4.6.1'
+    runtimeOnly 'info.picocli:picocli-shell-jline3:4.6.1'
+
+    implementation 'org.slf4j:slf4j-api:1.7.30'
+    runtimeOnly 'org.slf4j:slf4j-simple:1.7.30'
+
     testImplementation 'junit:junit:4.13.1'
     testImplementation 'com.tngtech.archunit:archunit-junit4:0.18.0'
 }
 
 application {
     mainClass = 'hands.on.archunit.WeatherApp'
+
 }
 
 tasks.named('test') {
